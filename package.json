@@ -1,0 +1,79 @@
+{
+  "name": "studynotion-client",
+  "description": "This is the client side of the StudyNotion App",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ramonak/react-progress-bar": "^5.0.3",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.4.0",
+    "bcrypt": "^5.1.0",
+    "chart.js": "^4.3.0",
+    "cloudinary": "^1.40.0",
+    "cookie-parser": "^1.4.6",
+    "copy-to-clipboard": "^3.3.3",
+    "cors": "^2.8.5",
+    "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.4.1",
+    "nodemailer": "^6.9.4",
+    "nodemon": "^3.0.1",
+    "otp-generator": "^4.0.1",
+    "razorpay": "^2.9.1",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-hook-form": "^7.43.9",
+    "react-hot-toast": "^2.4.0",
+    "react-icons": "^4.8.0",
+    "react-markdown": "^8.0.7",
+    "react-otp-input": "^3.0.0",
+    "react-rating-stars-component": "^2.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.9.0",
+    "react-scripts": "5.0.1",
+    "react-super-responsive-table": "^5.2.1",
+    "react-type-animation": "^3.0.1",
+    "showdown": "^2.1.0",
+    "swiper": "^9.3.1",
+    "video-react": "^0.16.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "cd server && npm run dev",
+    "dev": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run server\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
+    "concurrently": "^8.2.0",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0",
+    "tailwindcss": "^3.2.7"
+  }
+}
