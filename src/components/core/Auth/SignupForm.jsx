@@ -125,6 +125,7 @@ function SignupForm() {
             required
             type="text"
             name="email"
+            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
             value={email}
             onChange={handleOnChange}
             placeholder="Enter email address"
