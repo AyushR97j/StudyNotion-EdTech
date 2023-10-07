@@ -16,6 +16,8 @@ function SignupForm() {
   // student or instructor
   const [accountType, setAccountType] = useState(ACCOUNT_TYPE.STUDENT)
 
+  const[passAlert, setPassAlert] = useState("");
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -34,13 +36,21 @@ function SignupForm() {
     setFormData((prevData) => ({
       ...prevData,
       [e.target.name]: e.target.value,
-    }))
+    }));
+    // if(e.target.name === "password" && e.target.value.length<8) {
+    //   setPassAlert("Must be 8");
+    // }
   }
 
   // Handle Form Submission
   const handleOnSubmit = (e) => {
     e.preventDefault()
-
+    //const password = {password};
+    if(password.length < 8){
+      setPassAlert('Password must be of at least eight characters')
+      return
+    }
+    
     if (password !== confirmPassword) {
       toast.error("Passwords Do Not Match")
       return
@@ -156,6 +166,7 @@ function SignupForm() {
                 <AiOutlineEye fontSize={24} fill="#AFB2BF" />
               )}
             </span>
+            <p className="text-pink-100 mt-1 ">{passAlert}</p>
           </label>
           <label className="relative">
             <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
